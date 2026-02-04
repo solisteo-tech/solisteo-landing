@@ -1,10 +1,8 @@
-const nextConfig = {
-  // Static export configuration
-  output: 'export',
-  trailingSlash: true,
-  images: {
-    unoptimized: true,
-  },
+﻿const nextConfig = {
+  // Optimized for Vercel (Dynamic + Image Optimization)
+  // output: 'export', // Removed to allow Vercel Optimizations
+  
+  reactStrictMode: true,
 
   // Security headers
   async headers() {
@@ -18,17 +16,9 @@ const nextConfig = {
           { key: 'X-Content-Type-Options', value: 'nosniff' },
           { key: 'X-XSS-Protection', value: '1; mode=block' },
           { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
-          { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=()' }
         ]
       }
     ]
-  },
-
-  poweredByHeader: false,
-  reactStrictMode: true,
-
-  env: {
-    NEXT_PUBLIC_API_URL: process.env.NEXT_PUBLIC_API_URL || '',
   },
 
   eslint: {
@@ -38,8 +28,5 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
 };
-
-
-
 
 module.exports = nextConfig;
