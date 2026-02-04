@@ -1,0 +1,162 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Base Colors - Neutral & Clean */
+    --background: 0 0% 100%;
+    /* White */
+    --foreground: 222 47% 11%;
+    /* Dark Blue-Gray #0f172a */
+
+    /* Card & Surfaces */
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    /* Primary Brand - Professional Indigo/Blue */
+    --primary: 221 83% 53%;
+    /* #2563EB */
+    --primary-foreground: 210 40% 98%;
+
+    /* Secondary - Subtle Grays */
+    --secondary: 210 40% 96.1%;
+    /* #f1f5f9 */
+    --secondary-foreground: 222 47% 11%;
+
+    /* Muted Text */
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215 16% 47%;
+    /* #64748b */
+
+    /* Accents & States */
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222 47% 11%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    /* Borders & Inputs */
+    --border: 214 32% 91%;
+    /* #e2e8f0 */
+    --input: 214 32% 91%;
+    --ring: 221 83% 53%;
+
+    --radius: 0.5rem;
+
+    /* Custom Semantic Colors */
+    --success: 142 71% 45%;
+    /* #16a34a */
+    --warning: 38 92% 50%;
+    /* #ea580c */
+    --info: 221 83% 53%;
+
+    /* Legacy Vars Mapped for Safety */
+    --surface: hsl(0 0% 100%);
+    --text-primary: hsl(222 47% 11%);
+    --text-secondary: hsl(215 16% 47%);
+    --text-tertiary: hsl(215 16% 47%);
+  }
+
+  .dark {
+    --background: 222 47% 11%;
+    /* #0f172a */
+    --foreground: 210 40% 98%;
+
+    --card: 217 33% 17%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 217 33% 17%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 217 91% 60%;
+    --primary-foreground: 222 47.4% 11.2%;
+
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 217 33% 17%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 224 76% 48%;
+
+    /* Legacy Vars Mapped for Safety */
+    --surface: hsl(217 33% 17%);
+    --text-primary: hsl(210 40% 98%);
+    --text-secondary: hsl(215 20% 65%);
+    --text-tertiary: hsl(215 20% 50%);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/70 backdrop-blur-md border border-white/20 shadow-lg shadow-blue-500/5;
+  }
+
+  .glass-dark {
+    @apply bg-slate-900/90 backdrop-blur-xl border border-white/10 shadow-2xl;
+  }
+
+  .mesh-gradient {
+    background-color: #ffffff;
+    background-image:
+      radial-gradient(at 0% 0%, rgba(59, 130, 246, 0.05) 0px, transparent 50%),
+      radial-gradient(at 100% 0%, rgba(6, 182, 212, 0.05) 0px, transparent 50%),
+      radial-gradient(at 100% 100%, rgba(59, 130, 246, 0.03) 0px, transparent 50%),
+      radial-gradient(at 0% 100%, rgba(6, 182, 212, 0.03) 0px, transparent 50%);
+  }
+
+  .text-glow {
+    text-shadow: 0 0 15px rgba(59, 130, 246, 0.3);
+  }
+
+  .pixel-grid {
+    background-image: radial-gradient(rgba(59, 130, 246, 0.05) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+
+  .glass-light {
+    @apply bg-white/40 backdrop-blur-md border border-white/30 shadow-sm;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f8fafc;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #e2e8f0;
+  border-radius: 10px;
+  border: 2px solid #f8fafc;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #cbd5e1;
+}
