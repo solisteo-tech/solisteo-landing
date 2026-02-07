@@ -1,7 +1,6 @@
 import { Metadata } from 'next';
 import Navbar from '@/components/landing/Navbar';
 import Hero from '@/components/landing/Hero';
-import BentoGrid from '@/components/landing/BentoGrid';
 import Footer from '@/components/landing/Footer';
 import MeshBackground from '@/components/landing/MeshBackground';
 import PartnerTicker from '@/components/landing/PartnerTicker';
@@ -24,7 +23,6 @@ export default async function Home() {
       <Navbar />
       <Hero />
       <PartnerTicker />
-      <BentoGrid />
       <StatsTicker stats={stats} />
       <SyncBotFeatures />
       <PricingSection tiers={pricingTiers} />

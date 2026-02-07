@@ -10,9 +10,9 @@ const LOGOS = [
 
 export default function PartnerTicker() {
     return (
-        <div className="py-12 bg-slate-50/50 border-y border-slate-100 relative overflow-hidden">
+        <div className="py-8 bg-slate-50/50 border-y border-slate-100 relative overflow-hidden">
             <div className="max-w-7xl mx-auto px-6">
-                <div className="text-center mb-10">
+                <div className="text-center mb-6">
                     <span className="text-[10px] font-black uppercase tracking-[0.5em] text-slate-400">
                         Unified Marketplace Integration
                     </span>
