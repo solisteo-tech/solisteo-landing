@@ -50,7 +50,6 @@ export default function Navbar() {
                     {/* Desktop Nav */}
                     <div className="hidden md:flex items-center gap-10">
                         <NavLink href="/" label="Home" active={isHub} />
-                        <NavLink href="/syncbot" label="Automation" active={isSyncBot} />
                         <NavLink href="/vision" label="Vision" />
                     </div>
 
@@ -84,7 +83,6 @@ export default function Navbar() {
                             className="md:hidden absolute top-full inset-x-0 bg-white border-b border-slate-200 p-6 flex flex-col gap-6 font-bold uppercase tracking-widest text-sm text-slate-900 shadow-xl"
                         >
                             <Link href="/" onClick={() => setIsMobileMenuOpen(false)}>Home</Link>
-                            <Link href="/syncbot" onClick={() => setIsMobileMenuOpen(false)}>Automation</Link>
                             <Link href="/vision" onClick={() => setIsMobileMenuOpen(false)}>Vision</Link>
                             <button
                                 onClick={() => {

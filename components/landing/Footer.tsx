@@ -34,7 +34,6 @@ export default function Footer() {
                         <h4 className="text-[10px] font-black uppercase tracking-[0.4em] text-blue-600">Platform</h4>
                         <div className="flex flex-col gap-3">
                             <FooterLink href="/" label="Home" />
-                            <FooterLink href="/syncbot" label="Automation" />
                             <FooterLink href="/vision" label="Vision" />
                         </div>
                     </div>
