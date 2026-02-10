@@ -76,7 +76,7 @@ export default function VisionPage() {
                     </div>
 
                     <div className="space-y-12">
-                        <Milestone year="2026" title="Platform Launch" status="Complete" detail="Launched core platform with Amazon India and Flipkart integrations for early adopters." />
+                        <Milestone year="2026" title="Platform Launch" status="In Progress" detail="Launched core platform with Amazon India and Flipkart integrations for early adopters." />
                         <Milestone year="2026+" title="AI Features" status="In Progress" detail="Introducing smart pricing recommendations and predictive inventory management alongside launch." />
                         <Milestone year="2027" title="Growth Phase" status="Upcoming" detail="Expanding to 500+ sellers and adding ONDC network support across India." />
                     </div>
